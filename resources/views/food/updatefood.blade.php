@@ -50,7 +50,7 @@
             <option value="Western" {{($food['type'] == "Western") ? "selected" : ""}}>Western</option>
             <option value="Chinese" {{($food['type'] == "Chinese") ? "selected" : ""}}>Chinese</option>
             <option value="Japanese" {{($food['type'] == "Japanese") ? "selected" : ""}}>Japanese</option>
-
+              <option value="Armenian" {{($food['type'] == "Armenian") ? "selected" : ""}}>Armenian</option>
           </select>
         </div>
 
