@@ -3,7 +3,7 @@
 <div class="px-3 py-2 flex flex-col justify-center items-center h-[70vh]">
     <div class="flex flex-row leading-normal border shadow-md rounded-lg max-w-3xl min-w-[50%] bg-white max-h-[96%] min-h-[50%]">
         <div class="flex flex-col justify-center h-full max-h-[] max-w-[60%] min-w-[50%]">
-            <img src="{{ $food['picture'] }}" class='object-cover xl:rounded-l-lg h-full'>
+            <img src="{{ asset('storage/' . $food->picture) }}" alt="{{ $food->name }}">
         </div>
         <div class="flex flex-col p-4 h-full flex-grow">
             <div class="flex-grow flex flex-col justify-around">
