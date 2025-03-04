@@ -148,6 +148,34 @@ class FoodTableSeeder extends Seeder
                     'type' => 'Japanese',
                     'picture' => 'food_images/teriyaki.jpg',
                 ],
+                [
+                    'name' => 'Khorovats',
+                    'price' => 12.99,
+                    'description' => 'Armenian-style barbecue made with grilled marinated pork, beef, or lamb.',
+                    'type' => 'Armenian',
+                    'picture' => 'food_images/khorovats.jpg',
+                ],
+                [
+                    'name' => 'Tolma',
+                    'price' => 10.99,
+                    'description' => 'Grape leaves stuffed with a mixture of minced meat, rice, and herbs.',
+                    'type' => 'Armenian',
+                    'picture' => 'food_images/tolma.jpg',
+                ],
+                [
+                    'name' => 'Harissa',
+                    'price' => 9.99,
+                    'description' => 'A thick porridge made of wheat and slow-cooked chicken or lamb.',
+                    'type' => 'Armenian',
+                    'picture' => 'food_images/harissa.jpg',
+                ],
+                [
+                    'name' => 'Ghapama',
+                    'price' => 11.99,
+                    'description' => 'Baked pumpkin stuffed with rice, dried fruits, and nuts.',
+                    'type' => 'Armenian',
+                    'picture' => 'food_images/ghapama.jpg',
+                ],
             ]
         );
     }

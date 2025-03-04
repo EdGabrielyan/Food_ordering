@@ -32,6 +32,9 @@ if (session('cart') == null) {
             <div class="py-1 px-3 border-solid border-1 border-slate-300 rounded-xl text-center bg-white">
                 <a href="../home/Japanese" class="sort-font">Japanese</a>
             </div>
+            <div class="py-1 px-3 border-solid border-1 border-slate-300 rounded-xl text-center bg-white">
+                <a href="../home/Armenian" class="sort-font">Armenian</a>
+            </div>
         </div>
         <div class="flex flex-row space-x-4 flex-grow justify-end">
             <span class="font-weight-bold sort-font my-auto"> Order By :</span>
