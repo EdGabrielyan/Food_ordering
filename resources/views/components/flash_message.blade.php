@@ -56,18 +56,3 @@
         </div>
     </div>
 @endif
-
-
-{{-- @if ($errors->any())
-    <div class="alert alert-danger mx-2">
-        <div class="flex mx-3">
-            <div class="self-center">
-                <strong>Please check the form below for errors.</strong>
-            </div>
-            <div class="flex-auto"></div>
-            <div class="self-center">
-                <button type="button" onclick="window.location.reload(true)" class="close text-lg" data-dismiss="alert">×</button>
-            </div>
-        </div>
-    </div>
-@endif --}}
