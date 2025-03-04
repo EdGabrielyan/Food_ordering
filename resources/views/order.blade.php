@@ -22,7 +22,7 @@
                         <p class="mb-1"> Order ID: <span class="font-semibold"> {{$order->id}} </span> </p>
                         <p class="mb-1"> Date: <span class="font-semibold"> {{date_format(date_create($order->date), 'jS F Y')}} </span> </p>
                         <p class="mb-1"> Type: <span class="font-semibold capitalize"> {{$order->type}} </span> </p>
-                        <p class="mb-1"> Total: <span class="font-semibold capitalize"> RM{{number_format((float)$order->total, 2, '.', '')}} </span> </p>
+                        <p class="mb-1"> Total: <span class="font-semibold capitalize"> ${{number_format((float)$order->total, 2, '.', '')}} </span> </p>
                         {{-- flex justify-center leading-normal w-1/6 --}}
                         <div class="mt-2">
                             <button onclick="remove_form_action({{$order->id}})" type="button" class="openRemoveModal text-red-700 font-semibold bg-inherit border-red-500 rounded hover:text-white hover:bg-red-500 hover:border-transparent py-1 px-3 border-2">
@@ -42,7 +42,7 @@
                                 <div class="flex flex-col place-content-center px-4 py-3 leading-normal w-4/6">
                                     <h5 class="flex mb-2 text-2xl font-bold tracking-tight text-gray-900"> {{$food->name}} </h5>
                                     <p class="flex font-normal text-gray-700"> Quantity: <b>&nbsp;{{$food->pivot->quantity}}</b> </p>
-                                    <p class="flex font-normal text-gray-700"> Price: <b>&nbsp;RM{{number_format((float)($food->price*$food->pivot->quantity), 2, '.', '')}} &ensp;</b> <span class="opacity-60"> [RM{{number_format((float)($food->price), 2, '.', '')}} per unit] <span> </p>
+                                    <p class="flex font-normal text-gray-700"> Price: <b>&nbsp;${{number_format((float)($food->price*$food->pivot->quantity), 2, '.', '')}} &ensp;</b> <span class="opacity-60"> [${{number_format((float)($food->price), 2, '.', '')}} per unit] <span> </p>
                                 </div>
                             </div>
                             <div class="p-1"></div>
