@@ -32,7 +32,7 @@
                                     </svg>
                                 </td>
                                 <td class="text-left">
-                                    <span class="text-sm pl-2">+603-2276 1254</span>
+                                    <span class="text-sm pl-2">+374 93255223</span>
                                 </td>
                             </tr>
                         </tbody>
