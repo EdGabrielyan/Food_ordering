@@ -132,7 +132,7 @@ class FoodTableSeeder extends Seeder
                     'price' => 10.99,
                     'description' => 'Lightly battered and deep-fried seafood and vegetables.',
                     'type' => 'Japanese',
-                    'picture' => 'food_images/tempura.png',
+                    'picture' => 'food_images/tempura.jpg',
                 ],
                 [
                     'name' => 'Takoyaki',
@@ -161,13 +161,6 @@ class FoodTableSeeder extends Seeder
                     'description' => 'Grape leaves stuffed with a mixture of minced meat, rice, and herbs.',
                     'type' => 'Armenian',
                     'picture' => 'food_images/tolma.jpg',
-                ],
-                [
-                    'name' => 'Harissa',
-                    'price' => 9.99,
-                    'description' => 'A thick porridge made of wheat and slow-cooked chicken or lamb.',
-                    'type' => 'Armenian',
-                    'picture' => 'food_images/harissa.jpg',
                 ],
                 [
                     'name' => 'Ghapama',
