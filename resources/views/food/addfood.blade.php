@@ -51,6 +51,7 @@
             <option value="Western">Western</option>
             <option value="Chinese">Chinese</option>
             <option value="Japanese">Japanese</option>
+              <option value="Armenian">Armenian</option>
           </select>
         </div>
 
