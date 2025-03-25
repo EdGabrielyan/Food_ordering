@@ -27,7 +27,7 @@ class FoodController extends Controller
         }
         return view('food.home',  ['foods' => $foods]);
     }
-    
+
     public function filter($type)
     {
         $foods = Food::where('type', '=', $type);
@@ -40,7 +40,7 @@ class FoodController extends Controller
                 $sorted = $foods->orderBy('price', 'DESC');
             }
         } else {
-            $sorted = $foods;        
+            $sorted = $foods;
         }
         return view('food.home',  ['foods' => $foods->paginate(12)]);
     }
@@ -90,8 +90,23 @@ class FoodController extends Controller
             'type' => 'required',
             'picture' => 'required'
         ]);
-        Food::create($food->all());
-        return redirect('/food/viewfood');
+
+        if ($food->hasFile('picture')) {
+            $imagePath = $food->file('picture')->store('food_images', 'public');
+            $food->picture = $imagePath;
+        } else {
+            return back()->withErrors(['picture' => 'File upload failed.']);
+        }
+
+        Food::create([
+            'name' => $food->name,
+            'description' => $food->description,
+            'price' => $food->price,
+            'type' => $food->type,
+            'picture' => $food->picture,
+        ]);
+
+        return redirect('/food/viewfood')->with('success', 'Food item added successfully!');
     }
 
     public function update(Request $food, $id)
