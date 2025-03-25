@@ -53,7 +53,7 @@ if (session('cart') == null) {
             <div class="p-4">
                 <div class="font-bold text-xl mb-2">{{$data['name']}}</div>
                 <p class="text-gray-700 text-base">
-                    RM {{$data['price']}}
+                    $ {{$data['price']}}
                 </p>
             </div>
         </a>

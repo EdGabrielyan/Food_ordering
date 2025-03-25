@@ -24,7 +24,7 @@ if (!empty(session('cart'))) {
         </div>
         <div class="flex-1 text-right text-2xl self-center">
             @if (!empty(session('cart')))
-            <span class="mr-8 "> Total: RM{{number_format((float)($total), 2, '.', '')}} </span>
+            <span class="mr-8 "> Total: ${{number_format((float)($total), 2, '.', '')}} </span>
             @endif
         </div>
     </div>
@@ -45,7 +45,7 @@ if (!empty(session('cart'))) {
                     <div class="flex flex-col place-content-center px-4 py-3 leading-normal w-4/6">
                         <h5 class="flex mb-2 text-2xl font-bold tracking-tight text-gray-900"> {{$food['name']}} </h5>
                         <p class="flex font-normal text-gray-700"> Quantity: <b>&nbsp;{{$food['quantity']}}</b> </p>
-                        <p class="flex font-normal text-gray-700"> Price: <b>&nbsp;RM{{number_format((float)($food['price']*$food['quantity']), 2, '.', '')}} &ensp;</b> <span class="opacity-60"> [RM{{number_format((float)($food['price']), 2, '.', '')}} per unit] <span> </p>
+                        <p class="flex font-normal text-gray-700"> Price: <b>&nbsp;${{number_format((float)($food['price']*$food['quantity']), 2, '.', '')}} &ensp;</b> <span class="opacity-60"> [${{number_format((float)($food['price']), 2, '.', '')}} per unit] <span> </p>
                     </div>
                     <div class="flex justify-center leading-normal w-1/6">
                         <button onclick="remove_form_action({{$food['id']}})" type="button" class="openRemoveModal text-red-700 font-semibold bg-inherit border-red-500 rounded hover:text-white hover:bg-red-500 hover:border-transparent py-1 px-3 border-2">
