@@ -41,3 +41,35 @@ Route::delete('/user/{user}', [UserController::class, 'delete']);
 
 
 
+
+Route::get('/widget.js', function (\Illuminate\Http\Request $request) {
+    $key = $request->query('key');
+    $js = <<<JAVASCRIPT
+const key = "{$key}";
+
+(async function () {
+    if (!key) return;
+
+    const response = await fetch("https://foodordering-production-d990.up.railway.app/api/widget?key=" + key);
+    const data = await response.json();
+
+    if (data.error) return;
+
+    setTimeout(() => {
+        const modal = document.createElement('div');
+        modal.innerHTML = `
+<div style="position: fixed; top: 20%; left: 30%; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999;">
+    <h3>\${data.title}</h3>
+    <p>\${data.message}</p>
+    <button onclick="this.parentElement.remove()">Закрыть</button>
+</div>`;
+        document.body.appendChild(modal);
+    },  3000);
+})();
+JAVASCRIPT;
+    return response($js, 200)
+        ->header('Content-Type', 'application/javascript')
+        ->header('Access-Control-Allow-Origin', '*')  // Разрешаем доступ с любого домена
+        ->header('Cross-Origin-Resource-Policy', 'cross-origin'); // Разрешаем кросс-доменные ресурсы
+});
+

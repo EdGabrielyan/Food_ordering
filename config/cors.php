@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'embed-popup.js'],
+    'paths' => ['api/*', 'widget.js'],
 
     'allowed_methods' => ['*'],
 
