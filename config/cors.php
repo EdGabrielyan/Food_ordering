@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'widget.js'],
+    'paths' => ['api/*', 'web/.*'],
 
     'allowed_methods' => ['*'],
 
